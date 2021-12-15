@@ -1,0 +1,334 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: cursive;
+}
+
+body {
+  width: 98%;
+  height: 100vh;
+  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #aaaaaa;
+}
+
+.sample {
+  -webkit-animation-name: rain;
+          animation-name: rain;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.drop-ball {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5px;
+  height: 5px;
+  border: none;
+  -webkit-animation-name: rain;
+          animation-name: rain;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.drop-shape {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #344583;
+  border-radius: 100% 0% 100% 100%;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+@-webkit-keyframes rain {
+  from {
+    top: 0vh;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes rain {
+  from {
+    top: 0vh;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.drop-shape {
+  position: relative;
+  z-index: -2;
+}
+
+article {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 55vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 25vh;
+  -webkit-animation: textMovement 17s ease-in;
+          animation: textMovement 17s ease-in;
+}
+
+article .happy {
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: context-menu;
+}
+
+article .happy h3 {
+  font-size: 32px;
+  color: #344583;
+  -webkit-animation: textShadow-h3 2s ease-in forwards 15s;
+          animation: textShadow-h3 2s ease-in forwards 15s;
+}
+
+.sea {
+  position: absolute;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 45vh;
+}
+
+.sea .sea-waves {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 30%;
+}
+
+.sea .sea-waves .couple {
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+
+.sea .sea-waves .couple .wave {
+  position: absolute;
+  bottom: -10px;
+  left: -15px;
+  width: 50%;
+  height: 100%;
+  border-radius: 95% 10% 100% 0%;
+  background-color: #344583;
+  -webkit-transform: rotateZ(-15deg);
+          transform: rotateZ(-15deg);
+  -webkit-animation: fill-waves 5s ease-out 12s backwards;
+          animation: fill-waves 5s ease-out 12s backwards;
+}
+
+.sea .sea-waves .couple .flat {
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 80%;
+  margin-left: 20%;
+  height: 80%;
+  border-radius: 58% 100% 0% 0%;
+  background-color: #344583;
+  -webkit-transform: rotateZ(5deg);
+          transform: rotateZ(5deg);
+  -webkit-animation: fill-flats 4s ease-out 13s backwards;
+          animation: fill-flats 4s ease-out 13s backwards;
+}
+
+.sea .sea-bed {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: #344583;
+  -webkit-animation: fill-SeaBed 10s ease-out forwards 2s;
+          animation: fill-SeaBed 10s ease-out forwards 2s;
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 30vh;
+  font-size: 36px;
+  font-weight: bold;
+  color: #aaaaaa;
+  z-index: 2;
+  -webkit-animation: textShadow-h1 2s ease-in forwards 15s;
+          animation: textShadow-h1 2s ease-in forwards 15s;
+}
+
+@-webkit-keyframes textMovement {
+  0% {
+    top: -100vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes textMovement {
+  0% {
+    top: -100vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textShadow-h1 {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: -1px 10px 4px #23367c;
+  }
+}
+
+@keyframes textShadow-h1 {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: -1px 10px 4px #23367c;
+  }
+}
+
+@-webkit-keyframes textShadow-h3 {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: -1px 10px 4px #dad7d7;
+  }
+}
+
+@keyframes textShadow-h3 {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: -1px 10px 4px #dad7d7;
+  }
+}
+
+@-webkit-keyframes fill-SeaBed {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 32vh;
+  }
+}
+
+@keyframes fill-SeaBed {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 32vh;
+  }
+}
+
+@-webkit-keyframes fill-waves {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes fill-waves {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes fill-flats {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 80%;
+  }
+}
+
+@keyframes fill-flats {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
